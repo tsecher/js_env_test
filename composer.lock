@@ -2632,25 +2632,23 @@
         },
         {
             "name": "tsecher/bim-runner",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tsecher/bim-runner.git",
-                "reference": "bd534610a9d363e044ee57f1e945c7400ff92e0b"
+                "reference": "377654f30d1b0d04a125679bef5db3a8689515a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tsecher/bim-runner/zipball/bd534610a9d363e044ee57f1e945c7400ff92e0b",
-                "reference": "bd534610a9d363e044ee57f1e945c7400ff92e0b",
+                "url": "https://api.github.com/repos/tsecher/bim-runner/zipball/377654f30d1b0d04a125679bef5db3a8689515a0",
+                "reference": "377654f30d1b0d04a125679bef5db3a8689515a0",
                 "shasum": ""
             },
             "require": {
                 "doctrine/annotations": "^1.10",
                 "php": ">=7.3",
                 "symfony/console": "~3",
-                "symfony/dependency-injection": "~3",
                 "symfony/finder": "^5.0",
-                "symfony/framework-bundle": "~3",
                 "symfony/string": "^5.0",
                 "symfony/yaml": "~3"
             },
@@ -2679,10 +2677,10 @@
             ],
             "description": "Outil Symfony pour lancer une liste d'actions à la chaine.",
             "support": {
-                "source": "https://github.com/tsecher/bim-runner/tree/1.0.0",
+                "source": "https://github.com/tsecher/bim-runner/tree/1.0.1",
                 "issues": "https://github.com/tsecher/bim-runner/issues"
             },
-            "time": "2020-05-28T13:55:10+00:00"
+            "time": "2020-05-29T15:39:55+00:00"
         }
     ],
     "packages-dev": [],
