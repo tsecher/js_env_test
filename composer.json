@@ -24,7 +24,7 @@
         }
     },
     "require": {
-        "tsecher/bim-runner": "dev-master",
+        "tsecher/bim-runner": "~1",
         "symfony/process": "^5.2@dev"
     }
 }
