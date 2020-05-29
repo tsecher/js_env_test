@@ -1,0 +1,7 @@
+actions:
+    - 4
+params:
+    action_name: 'Lancer le serveur'
+    action_class_name: StartHttpServer
+    action_weight: '10'
+    action_namespace: JsEnv\Actions
