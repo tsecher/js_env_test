@@ -50,7 +50,6 @@ class CreateJsTestRepAction extends AbstractAction {
         return [
           [$this, 'createDirStructure'],
           [$this, 'npmInit'],
-          [$this, 'launch'],
         ];
     }
 
