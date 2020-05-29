@@ -1,0 +1,30 @@
+{
+    "name": "tsecher/js-env",
+    "description": "Outil de création rapide d'installation d'environnement js.",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Thomas Sécher",
+            "email": "me@thomas-secher.fr"
+        }
+    ],
+    "minimum-stability": "dev",
+    "bin": [
+        "js_env"
+    ],
+    "autoload": {
+        "psr-4": {
+            "JsEnv\\": "src"
+        }
+    },
+    "repositories": {
+        "bim-runner": {
+            "type": "vcs",
+            "url": "https://github.com/tsecher/bim-runner"
+        }
+    },
+    "require": {
+        "tsecher/bim-runner": "dev-master",
+        "symfony/process": "^5.2@dev"
+    }
+}
