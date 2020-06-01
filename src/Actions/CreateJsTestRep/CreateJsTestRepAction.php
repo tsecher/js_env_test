@@ -69,7 +69,7 @@ class CreateJsTestRepAction extends AbstractAction {
     protected function npmInit() {
         $dir = ProjectTools::me()->getProjectDir() . '/src';
         $this->command('npm init -y', $dir);
-        $this->command('npm i bim-mix http-server browser-sync browser-sync-webpack-plugin@2.0.1', $dir);
+        $this->command('npm i ' . ( implode(' ', $this->getLocalConfig()['packages']['list'])), $dir);
         $this->command('npm run dev', $dir);
         $this->command('chmod 775 start', ProjectTools::me()
           ->getProjectDir());

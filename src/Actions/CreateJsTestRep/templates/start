@@ -1,1 +1,1 @@
-cd src && node launch.js
+cd src && npm run watch

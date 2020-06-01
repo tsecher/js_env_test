@@ -12,16 +12,28 @@
 const bimMix = require('bim-mix');
 
 // Disable mix notification.
-// bimMix.getMix().disableNotifications();
+bimMix.getMix().disableSuccessNotifications();
 
-// Enable live reload.
-// const LiveReloadPlugin = require('webpack-livereload-plugin');
-// bimMix.getMix().webpackConfig({
-// 	plugins: [
-// 		new LiveReloadPlugin()
-// 	]
-// });
-const fs = require("fs");
-const conf = JSON.parse(fs.readFileSync('./http-server.json', 'utf8'));
-bimMix.getMix().browserSync(conf.url);
 
+if (process.argv.indexOf('--watch') > -1 ){
+
+	var bs = require("browser-sync").create();
+	var portfinder = require('portfinder');
+
+	portfinder.basePort = 3000;
+	portfinder.getPort(function (err, port) {
+		if (err) { throw err; }
+
+		// .init starts the server
+		bs.init({
+			server: "../",
+			port: port
+		});
+
+		['../**/*.html', "../dev/**/*.css", "../dev/**/*.js"].forEach(
+			(pattern) => {
+				bs.watch(pattern).on('change', bs.reload);
+			}
+		)
+	});
+}
