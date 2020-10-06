@@ -69,10 +69,10 @@ class CreateJsTestRepAction extends AbstractAction {
     protected function npmInit() {
         $dir = ProjectTools::me()->getProjectDir() . '/src';
         $this->command('npm init -y', $dir);
-        $this->command('npm i ' . ( implode(' ', $this->getLocalConfig()['packages']['list'])), $dir);
-        $this->command('npm run dev', $dir);
-        $this->command('chmod 775 start', ProjectTools::me()
-          ->getProjectDir());
+        $this->command('npm i ' . ( implode(' ', $this->getLocalConfig()['packages']['list']) . ' --save --y'), $dir);
+        $this->command('phpstorm .', ProjectTools::me()
+            ->getProjectDir());
+        $this->command('./gulp', $dir);
     }
 
 }

@@ -1,4 +1,15 @@
 list:
-    - bim-mix
+    - "@babel/core"
+    - "@babel/preset-env"
+    - babel-loader
+    - gulp-autoprefixer
+    - gulp-clean-css
+    - gulp-iconfont
+    - gulp-imagemin
+    - gulp-sass
+    - https://thomasse@bitbucket.org/thomasse/my_gulp.git
+    - patch-package
+    - piped-webpack
+    - reset-css
+    - webpack
     - browser-sync
-    - portfinder
