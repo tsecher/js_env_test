@@ -1,0 +1,94 @@
+
+//////
+// Transition IN
+$inTime: .8s;
+$inEase: cubic-bezier(0, 0.8, 0, 1);
+@mixin transitionIn($properties...) {
+    $rule: '';
+
+    @for $i from 1 through length($properties) {
+        $property: nth($properties, $i);
+        @if $i != 1 {
+            $rule: '#{$rule} , ';
+        }
+        $rule: '#{$rule} #{$property} #{$inEase} #{$inTime}';
+    }
+
+    transition: #{$rule};
+}
+
+//////
+// Transition Out
+$outTime: .5s;
+$outEase: cubic-bezier(1, 0, .8, 0);
+@mixin transitionOut($properties...) {
+    $rule: '';
+
+    @for $i from 1 through length($properties) {
+        $property: nth($properties, $i);
+        @if $i != 1 {
+            $rule: '#{$rule} , ';
+        }
+        $rule: '#{$rule} #{$property} #{$outEase} #{$outTime}';
+    }
+
+    transition: #{$rule};
+}
+
+//////
+// Transition Normal
+$normalTime: .3s;
+$normalEase: ease;
+@mixin transition($properties...) {
+    $rule: '';
+
+    @for $i from 1 through length($properties) {
+        $property: nth($properties, $i);
+        @if $i != 1 {
+            $rule: '#{$rule} , ';
+        }
+        $rule: '#{$rule} #{$property} #{$normalTime} #{$normalEase}';
+    }
+
+    transition: #{$rule};
+}
+
+
+
+//////
+// Transition InOut
+$inOutTime: .5s;
+$inOutEase: cubic-bezier(.5, 0, 0, 1);
+@mixin transitionInOut($properties...) {
+    $rule: '';
+
+    @for $i from 1 through length($properties) {
+        $property: nth($properties, $i);
+        @if $i != 1 {
+            $rule: '#{$rule} , ';
+        }
+        $rule: '#{$rule} #{$property} #{$inOutTime} #{$inOutEase}';
+    }
+
+    transition: #{$rule};
+}
+
+//////
+// Transition Bounce
+$bounceTime: .5s;
+$bounceEase: cubic-bezier(.47,1.64,.41,.8);
+@mixin transitionBounce($properties...) {
+    $rule: '';
+
+    @for $i from 1 through length($properties) {
+        $property: nth($properties, $i);
+        @if $i != 1 {
+            $rule: '#{$rule} , ';
+        }
+        $rule: '#{$rule} #{$property} #{$bounceTime} #{$bounceEase}';
+    }
+
+    transition: #{$rule};
+}
+
+

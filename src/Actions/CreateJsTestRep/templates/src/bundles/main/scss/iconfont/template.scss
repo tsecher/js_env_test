@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "iconfont";
+  src: url('./fonts/iconfont.eot?v=1602001299488');
+  src: url('./fonts/iconfont.eot?v=1602001299488#iefix') format('eot'),
+  url('./fonts/iconfont.woff2?v=1602001299488') format('woff2'),
+  url('./fonts/iconfont.woff?v=1602001299488') format('woff'),
+  url('./fonts/iconfont.ttf?v=1602001299488') format('truetype'),
+  url('./fonts/iconfont.svg?v=1602001299488#iconfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+%icon-base-styles {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "iconfont";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+$icons: (
+edit: "\EA01"
+);
+
+[data-ic]:before { content: attr(data-ic); }
+
+[data-ic]:before,
+.ic-edit:before {
+                                                                                                       @extend %icon-base-styles;
+                                                                                                     }
+
+.ic-edit:before { content: "\EA01" }
+
+$iconfont-icedit: "\EA01"
