@@ -7,7 +7,7 @@ list:
     - gulp-iconfont
     - gulp-imagemin
     - gulp-sass
-    - https://thomasse@bitbucket.org/thomasse/my_gulp.git
+    - "@consertotech/lycanthrop_gulp"
     - patch-package
     - piped-webpack
     - reset-css

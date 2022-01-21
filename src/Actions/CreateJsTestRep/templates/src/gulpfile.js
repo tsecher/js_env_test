@@ -2,7 +2,7 @@
  * Load toutes les taches par défaut présente dans lycanthrop_gulp/tasks/*.js
  * @type {TaskLoaderClass}
  */
-const taskLoader = require('lycanthrop_gulp/utils/TaskLoader');
+const taskLoader = require('@consertotech/lycanthrop_gulp/utils/TaskLoader');
 
 // Load les taches par défaut
 taskLoader.loadDefaultTasks(exports);
@@ -11,4 +11,4 @@ taskLoader.loadDefaultTasks(exports);
 exports.default = exports.watch
 
 // Load les taches custom
-// taskLoader.loadTasks('./customTasks', exports);
+// taskLoader.loadTasks('./custom-tasks', exports);
